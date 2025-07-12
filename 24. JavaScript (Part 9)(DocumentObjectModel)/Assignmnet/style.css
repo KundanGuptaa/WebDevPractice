@@ -1,0 +1,18 @@
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.box{
+    border: black;
+    background-color: pink;
+}
+.btnstyle{
+    background-color: blue;
+    color: white;
+}
+.h1sec{
+    text-decoration: underline;;
+    color: purple;
+}

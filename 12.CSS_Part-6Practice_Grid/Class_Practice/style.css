@@ -1,0 +1,31 @@
+h2{
+    color: burlywood;
+}
+h1 span{
+    color: darkgoldenrod;
+}
+
+.card
+{
+    width: 400px;
+    padding: 20px;
+    border: 2px solid black;
+    margin: 20px;
+    border-radius: 25px;
+}
+img{
+    width: 100%;
+    border-radius: 25px;
+}
+#pets{
+    display: flex;
+    justify-content: space-evenly;
+}
+@media (max-width:500px){
+    #pets{
+        flex-wrap: wrap;
+    }
+    h2,h1{
+        text-align: center;
+    }
+}

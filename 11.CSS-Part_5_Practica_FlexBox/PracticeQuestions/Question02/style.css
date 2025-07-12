@@ -1,0 +1,18 @@
+#parent {
+    height: 50px;
+    width: 900px;
+    background-color: lightpink;
+    /* display: block; */
+    border: 2px solid green;
+    border-radius: 10px;
+}
+
+div {
+    height: 50px;
+    width: 80px;
+    font-size: 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-content: center;
+
+}

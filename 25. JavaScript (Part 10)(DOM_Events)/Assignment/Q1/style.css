@@ -1,0 +1,8 @@
+#mouseout{
+    height: 50px;
+    width: 300px;
+    background: rgb(135, 79, 121);
+    text-align: center;
+    margin: auto;
+    line-height: 20px;
+}

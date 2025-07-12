@@ -1,0 +1,12 @@
+#outer {
+    height: 200px;
+    width: 200px;
+    background-color: pink;
+}
+
+.inner{
+height: 50%;
+width: 50%;
+background-color: blue;
+margin: 1px;
+}
