@@ -2,6 +2,9 @@ const express = require("express");
 const app = express();
 const path=require("path");
 const port = 8080;
+app.listen(port, () => {
+    console.log(`Listening on port ${port}`);
+})
 app.set("view engine","ejs");
 app.set("views",path.join(__dirname,"/views"));
 
@@ -14,12 +17,9 @@ app.get("/rolldice",(req,res)=>{
 });
 
 app.get("/ig/:username",(req,res)=>{
+    const followers=["kundan","hum","tum"];
  let {username}=req.params;
  console.log(username);
- res.render("insta.ejs",{username});
+ res.render("insta.ejs",{username,followers});
 });
 
-
-app.listen(port, () => {
-    console.log(`Listening on port ${port}`);
-})
