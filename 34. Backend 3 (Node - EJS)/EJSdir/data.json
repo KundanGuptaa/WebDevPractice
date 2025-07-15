@@ -2,7 +2,7 @@
   "cats": {
     "name": "cats",
     "followers": 25000,
-    "following": 5,
+    "following": 5000,
     "posts": [
       {
         "image": "https://plus.unsplash.com/premium_photo-1677545182067-26ac518ef64f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8Y2F0c3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",

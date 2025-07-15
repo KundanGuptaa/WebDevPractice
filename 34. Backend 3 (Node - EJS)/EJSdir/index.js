@@ -23,3 +23,15 @@ app.get("/ig/:username",(req,res)=>{
  res.render("insta.ejs",{username,followers});
 });
 
+app.get("/instagram/:username",(req,res)=>{
+    let {username}=req.params;
+    const instaData=require("./data.json");
+    const data=instaData[username];
+    console.log(data);
+    if(data){
+        res.render("instagram.ejs",{data});
+    }else{
+        res.render("error.ejs");
+    }
+});
+
