@@ -1,0 +1,19 @@
+{
+  "name": "39.-backend-5-(node-with-sql)",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Kundan Gupta",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@faker-js/faker": "^9.9.0",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.2",
+    "uuid": "^11.1.0"
+  }
+}
