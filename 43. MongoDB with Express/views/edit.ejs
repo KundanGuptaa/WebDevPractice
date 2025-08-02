@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Edit your chats</title>
+    <style>
+      .button-34 {
+        margin: 5px;
+        background: rgb(68, 161, 255);
+        border-radius: 16px;
+        box-shadow: blue 0 10px 20px -10px;
+        box-sizing: border-box;
+        color: #ffffff;
+        cursor: pointer;
+        font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+          NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+          EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto,
+          "Helvetica Neue", "Noto Sans", sans-serif;
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 24px;
+        opacity: 1;
+        outline: 0 solid transparent;
+        padding: 8px 18px;
+        -webkit-user-select: none;
+        user-select: none;
+        touch-action: manipulation;
+        width: fit-content;
+        word-break: break-word;
+        border: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Edit your Chat: <b><%=chat._id%></b></h3>
+    <p>This chat was sent from <i><b><%=chat.from%></b></i> to <i><b><%=chat.to%></b></i></p>
+    <form method="POST" action="/chats/<%=chat._id%>?_method=PUT">
+      <textarea name="msg" rows="5" cols="25"><%=chat.msg%></textarea>
+      <br>
+      <button class="button-34">Edit</button>
+    </form>
+  </body>
+</html>
