@@ -13,19 +13,25 @@ const orderSchema = new Schema({
   price: Number,
 });
 
-
 const customerSchema = new Schema({
-    name: String,
-    orders: [
-        {
-            type: Schema.Types.ObjectId,
-            ref: "Order",
-        },
-    ],
+  name: String,
+  orders: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Order",
+    },
+  ],
+});
+
+customerSchema.post("findOneAndDelete", async (customer) => {
+  if (customer.orders.length) {
+    let res = await Order.deleteMany({ _id: { $in: customer.orders } });
+    console.log(res);
+  }
 });
 
 const Order = mongoose.model("Order", orderSchema);
-const Customer=mongoose.model("Customer",customerSchema);
+const Customer = mongoose.model("Customer", customerSchema);
 
 // const addCustomer=async ()=>{
 //     let cust1= new Customer({
@@ -58,20 +64,19 @@ const Customer=mongoose.model("Customer",customerSchema);
 
 // addOrder();
 
-const findCustomer=async ()=>{
-    let result=await Customer.find({}).populate("orders");
-    console.log(result[0]);
-    
+const findCustomer = async () => {
+  let result = await Customer.find({}).populate("orders");
+  console.log(result[0]);
 };
 
-const addCust=async ()=>{
+const addCust = async () => {
   let newCust = new Customer({
-    name:"Karan Arjun",
+    name: "Karan Arjun",
   });
 
-  let newOrder=new Order({
-    item:"Pizza",
-    price:250,
+  let newOrder = new Order({
+    item: "Pizza",
+    price: 250,
   });
 
   newCust.orders.push(newOrder);
@@ -82,4 +87,8 @@ const addCust=async ()=>{
   console.log("New Customer Added!");
 };
 
-addCust();
+const delCust=async ()=>{
+  let data = await Customer.findByIdAndDelete("68a69b84936893d65acee8aa");
+};
+ delCust();
+// addCust();
